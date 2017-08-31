@@ -6,7 +6,7 @@ defmodule MasterApp.Mixfile do
      version: "0.0.1",
      deps_path: "../../deps",
      lockfile: "../../mix.lock",
-     elixir: "~> 1.0",
+     elixir: "~> 1.5",
      deps: deps]
   end
 
@@ -14,7 +14,7 @@ defmodule MasterApp.Mixfile do
   #
   # Type `mix help compile.app` for more information
   def application do
-    [applications: [:logger, :app_one, :app_two],
+    [extra_applications: [:logger, :app_one, :app_two],
      mod: {MasterApp, []}]
   end
 

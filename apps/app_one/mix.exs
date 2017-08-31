@@ -6,7 +6,7 @@ defmodule AppOne.Mixfile do
      version: "0.0.1",
      deps_path: "../../deps",
      lockfile: "../../mix.lock",
-     elixir: "~> 1.0",
+     elixir: "~> 1.5",
      deps: deps]
   end
 
@@ -14,7 +14,7 @@ defmodule AppOne.Mixfile do
   #
   # Type `mix help compile.app` for more information
   def application do
-    [applications: [:logger, :cowboy],
+    [extra_applications: [:logger, :cowboy],
      mod: {AppOne, []}]
   end
 

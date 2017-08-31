@@ -1,8 +1,16 @@
+# Import all plugins from `rel/plugins`
+# They can then be used by adding `plugin MyPlugin` to
+# either an environment, or release definition, where
+# `MyPlugin` is the name of the plugin module.
+Path.join(["rel", "plugins", "*.exs"])
+|> Path.wildcard()
+|> Enum.map(&Code.eval_file(&1))
+
 use Mix.Releases.Config,
     # This sets the default release built by `mix release`
-    default_release: :master_app,
+    default_release: :default,
     # This sets the default environment used by `mix release`
-    default_environment: Mix.env
+    default_environment: Mix.env()
 
 # For a full list of config options for both releases
 # and environments, visit https://hexdocs.pm/distillery/configuration.html
@@ -14,37 +22,35 @@ use Mix.Releases.Config,
 # and environment configuration is called a profile
 
 environment :dev do
+  # If you are running Phoenix, you should make sure that
+  # server: true is set and the code reloader is disabled,
+  # even in dev mode.
+  # It is recommended that you build with MIX_ENV=prod and pass
+  # the --env flag to Distillery explicitly if you want to use
+  # dev mode.
   set dev_mode: true
   set include_erts: false
+  set cookie: :"@C!@ju^%o^)Wv)Z;a{_U3M==h^|d5~ffeR9Gzi/yD<u!1?,W,UiB^<=NDgy?ybxt"
 end
 
 environment :prod do
   set include_erts: true
   set include_src: false
+  set cookie: :"QL*|`!352)_w4}R6:E9MknyozzYqzteKd{X0l:a8WY(CJOru<kKgQDxd|dy2E%LI"
 end
 
 # You may define one or more releases in this file.
 # If you have not set a default release, or selected one
 # when running `mix release`, the first release in the file
 # will be used by default
-release :combined do
-  set version: "0.1.0"
-  set applications: [:master_app, :app_one, :app_two]
-  plugin Conform.ReleasePlugin
-end
 
-release :app_one do
-  set version: current_version(:app_one)
-  plugin Conform.ReleasePlugin
-end
-
-release :app_two do
-  set version: current_version(:app_two)
-  plugin Conform.ReleasePlugin
-end
-
-release :master_app do
-  set version: current_version(:master_app)
-  plugin Conform.ReleasePlugin
+release :distillery_umbrella do
+  set version: "0.0.1"
+  set applications: [
+    :runtime_tools,
+    app_one: :permanent,
+    app_two: :permanent,
+    master_app: :permanent
+  ]
 end
 
