@@ -52,5 +52,6 @@ release :distillery_umbrella do
     app_two: :permanent,
     master_app: :permanent
   ]
+  plugin Conform.ReleasePlugin
 end
 
