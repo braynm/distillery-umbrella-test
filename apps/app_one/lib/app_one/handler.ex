@@ -4,7 +4,7 @@ defmodule AppOne.Handler do
   def init(_type, req, _opts), do: {:ok, req, nil}
 
   def handle(req, state) do
-    {ok, req2} = :cowboy_req.reply(200, [], "Hello from App One V3!", req)
+    {ok, req2} = :cowboy_req.reply(200, [], "Hello from App One V4!", req)
     {ok, req2, state}
   end
 
