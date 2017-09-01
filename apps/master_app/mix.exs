@@ -14,7 +14,7 @@ defmodule MasterApp.Mixfile do
   #
   # Type `mix help compile.app` for more information
   def application do
-    [extra_applications: [:logger, :app_one, :app_two],
+    [extra_applications: [:logger, :app_one, :app_two, :frontend],
      mod: {MasterApp, []}]
   end
 
@@ -33,6 +33,8 @@ defmodule MasterApp.Mixfile do
   # Type `mix help deps` for more examples and options
   defp deps do
     [{:app_one, in_umbrella: true},
-     {:app_two, in_umbrella: true}, ]
+     {:app_two, in_umbrella: true},
+     {:frontend, in_umbrella: true},
+    ]
   end
 end

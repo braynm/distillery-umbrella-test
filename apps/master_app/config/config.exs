@@ -29,3 +29,4 @@ use Mix.Config
 config :master_app, port: nil
 config :app_one, port: nil
 config :app_two, port: nil
+config :frontend, port: nil
