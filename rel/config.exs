@@ -50,6 +50,7 @@ release :distillery_umbrella do
     :runtime_tools,
     app_one: :permanent,
     app_two: :permanent,
+    frontend: :permanent,
     master_app: :permanent
   ]
   plugin Conform.ReleasePlugin
