@@ -22,6 +22,10 @@ use Mix.Config
 # here (which is why it is important to import them last).
 #
 #     import_config "#{Mix.env}.exs"
-config :master_app, port: 8099
-config :app_one, port: 9090
-config :app_two, port: 9091
+#config :master_app, port: 8099
+#config :app_one, port: 9090
+#config :app_two, port: 9091
+#
+config :master_app, port: nil
+config :app_one, port: nil
+config :app_two, port: nil
