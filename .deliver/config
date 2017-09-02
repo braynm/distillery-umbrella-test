@@ -10,6 +10,8 @@ STAGING_HOSTS="192.168.1.13"
 STAGING_USER="deploy"
 DELIVER_TO="/home/deploy"
 
+GIT_CLEAN_PATHS=${GIT_CLEAN_PATHS:="rel/${APP}/releases/*/${APP}.tar.gz"}
+
 PRODUCTION_HOSTS="192.168.1.13" # deploy / production hosts separated by space
 PRODUCTION_USER="deploy" # local user at deploy hosts
 DELIVER_TO="/opt/deploy" # deploy directory on production hosts
