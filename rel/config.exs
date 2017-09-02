@@ -46,6 +46,7 @@ end
 
 release :master_app do
   set version: "0.0.4"
+  set output_dir: "rel/master_app"
   set applications: [
     :runtime_tools,
     app_one: :permanent,
