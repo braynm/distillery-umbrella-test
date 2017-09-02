@@ -44,8 +44,8 @@ end
 # when running `mix release`, the first release in the file
 # will be used by default
 
-release :distillery_umbrella do
-  set version: "0.0.2"
+release :master_app do
+  set version: "0.0.3"
   set applications: [
     :runtime_tools,
     app_one: :permanent,
