@@ -37,6 +37,7 @@ environment :prod do
   set include_erts: true
   set include_src: false
   set cookie: :"QL*|`!352)_w4}R6:E9MknyozzYqzteKd{X0l:a8WY(CJOru<kKgQDxd|dy2E%LI"
+  set output_dir: "rel/master_app"
 end
 
 # You may define one or more releases in this file.
@@ -46,7 +47,6 @@ end
 
 release :master_app do
   set version: "0.0.4"
-  set output_dir: "rel/master_app"
   set applications: [
     :runtime_tools,
     app_one: :permanent,
