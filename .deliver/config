@@ -2,7 +2,8 @@ APP="master_app"
 
 BUILD_HOST="192.168.1.13"
 BUILD_USER="deploy"
-BUILD_AT="/tmp/edeliver/distillery_umbrella/builds"
+# BUILD_AT="/tmp/edeliver/distillery_umbrella/builds"
+BUILD_AT="/home/deploy/distillery_umbrella/builds"
 
 RELEASE_DIR="$BUILD_AT/apps/$APP/rel/$APP"
 
