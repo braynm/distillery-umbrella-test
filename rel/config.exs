@@ -45,7 +45,7 @@ end
 # will be used by default
 
 release :master_app do
-  set version: "0.0.3"
+  set version: "0.0.4"
   set applications: [
     :runtime_tools,
     app_one: :permanent,
