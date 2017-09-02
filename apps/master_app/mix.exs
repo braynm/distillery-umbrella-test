@@ -14,7 +14,7 @@ defmodule MasterApp.Mixfile do
   #
   # Type `mix help compile.app` for more information
   def application do
-    [extra_applications: [:logger, :app_one, :app_two, :frontend],
+    [extra_applications: [:logger, :app_one, :app_two, :frontend, :edeliver],
      mod: {MasterApp, []}]
   end
 
