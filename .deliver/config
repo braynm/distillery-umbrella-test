@@ -1,8 +1,8 @@
-APP="distillery-umbrella"
+APP="distillery_umbrella"
 
 BUILD_HOST="192.168.1.13"
 BUILD_USER="deploy"
-BUILD_AT="/tmp/edeliver/distillery-umbrella/builds"
+BUILD_AT="/tmp/edeliver/distillery_umbrella/builds"
 
 RELEASE_DIR="$BUILD_AT/apps/$APP/rel/$APP"
 
@@ -25,7 +25,7 @@ pre_erlang_get_and_update_deps() {
 }
 
 post_erlang_clean_compile() {
-  [[ "$APP" = "distillery-umbrella" ]] && prepare_projects_in_umbrella
+  [[ "$APP" = "distillery_umbrella" ]] && prepare_projects_in_umbrella
 }
 
 prepare_projects_in_umbrella() {
