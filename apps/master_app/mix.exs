@@ -3,7 +3,7 @@ defmodule MasterApp.Mixfile do
 
   def project do
     [app: :master_app,
-     version: "0.0.3",
+     version: "0.0.4",
      deps_path: "../../deps",
      lockfile: "../../mix.lock",
      elixir: "~> 1.5",
