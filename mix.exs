@@ -22,7 +22,7 @@ defmodule UmbrellaTest.Mixfile do
   # and cannot be accessed from applications inside the apps folder
   defp deps do
     [
-      {:conform, "~> 0.15.1"},
+      {:conform, "~> 2.5.2"},
       {:edeliver, "~> 1.4.4"},
       {:distillery, ">= 0.8.0"}
     ]
