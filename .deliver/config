@@ -5,12 +5,13 @@ BUILD_USER="deploy"
 # BUILD_AT="/tmp/edeliver/distillery_umbrella/builds"
 BUILD_AT="/home/deploy/distillery_umbrella/builds"
 
-RELEASE_DIR="$BUILD_AT/apps/$APP/rel/$APP"
+ELEASE_DIR="$BUILD_AT/apps/$APP/rel/$APP"
 
 STAGING_HOSTS="192.168.1.13"
 STAGING_USER="deploy"
 DELIVER_TO="/home/deploy"
 
+GIT_CLEAN_PATHS=${GIT_CLEAN_PATHS:="rel"}
 # GIT_CLEAN_PATHS=${GIT_CLEAN_PATHS:="_build/rel/${APP}/releases/*/${APP}.tar.gz"}
 
 PRODUCTION_HOSTS="192.168.1.13" # deploy / production hosts separated by space
